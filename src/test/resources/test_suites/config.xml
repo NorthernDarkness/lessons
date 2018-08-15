@@ -1,0 +1,13 @@
+<system>
+    <cabinet>
+        <shelf type="EGEM2">
+            <blade type="SCXB">
+
+            </blade>
+            <pfm type="PFM3200">
+
+            </pfm>
+        </shelf>
+        <pdu></pdu>
+    </cabinet>
+</system>

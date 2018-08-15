@@ -1,3 +1,5 @@
+package com.mera.lessons.testng;
+
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeGroups;

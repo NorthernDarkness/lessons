@@ -1,3 +1,5 @@
+package com.mera.lessons.core;
+
 import org.testng.annotations.Test;
 
 import java.util.concurrent.ExecutionException;
