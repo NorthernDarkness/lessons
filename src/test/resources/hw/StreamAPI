@@ -1,0 +1,37 @@
+1. You have an enum:
+
+enum Bridge{
+        BRIDGE_0_1(0,1),
+        BRIDGE_0_25(0,25),
+        BRIDGE_0_26(0,26),
+        BRIDGE_0_28(0,28),
+        BRIDGE_1_1(1,1),
+        BRIDGE_1_25(1,25),
+        BRIDGE_1_26(1,26),
+        BRIDGE_1_28(1,28);
+
+        private final int shelf;
+        private final int slot;
+
+        Bridge(int shelf, int slot){
+            this.shelf = shelf;
+            this.slot = slot;
+        }
+
+        public int getShelf() {
+            return shelf;
+        }
+
+        public int getSlot() {
+            return slot;
+        }
+
+
+You Need to write a method that gets a List<Integer> of existing shelf numbers.
+The method has to return a List<Bridge> that belongs to these shelves.
+
+
+2.
+
+Wtrite a method that gets a String representing IPv4 Ip address with "." as octet delimiter like "192.168.0.1".
+The method has to return the same IP address in HEX with leading zeros with ":" as delimiter like "8B:A8:00:01"

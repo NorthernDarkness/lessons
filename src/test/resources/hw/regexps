@@ -1,0 +1,11 @@
+Create a method that get a String like below as input:
+
+SystemConfiguration:
+Shelf 0: SN: HSY63\1 Blades: 0-0 | 0-26 | 0-1 | 0-28 | 0-25
+Shelf 1: SN: EAF92\2 Blades: 1-0 | 1-26 | 1-1 | 1-23 | 1-28 | 1-25
+
+
+where each shelf has a list of blades
+and returns a Map<Integer, List<String>> or MultiMap containing blades per shelf.
+
+Note that you may have any limited number of shelves and any limited number of blades in each shelf including 0

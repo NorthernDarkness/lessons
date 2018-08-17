@@ -87,10 +87,12 @@ public class Regexps {
     @Test
     public void testNonGreedyQuantifiers() {
 //        aab
-//        Pattern pattern = Pattern.compile("\"(.*)\"");
+        Pattern pattern = Pattern.compile("\"(.*)\"");
 //        Pattern pattern = Pattern.compile(".*\"(.*)\"");
-        Pattern pattern = Pattern.compile("\"(.*?)\"");
+//        Pattern pattern = Pattern.compile("\"(.*?)\"");
+//        Pattern pattern = Pattern.compile("\"([^\"]*)\"");
         Matcher matcher = pattern.matcher("\"value1\"something\"value2\"something");
+//        Matcher matcher = pattern.matcher("\"va\"lue1\"something\"value2\"something");
         while (matcher.find()) {
             System.out.println(matcher.group(1));
         }

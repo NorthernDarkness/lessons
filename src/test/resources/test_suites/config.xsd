@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="system" type="systemType"/>
-    <xs:complexType name="pfmType">
-        <xs:simpleContent>
-            <xs:extension base="xs:string">
-                <xs:attribute type="xs:string" name="type"/>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
-    <xs:complexType name="cabinetType">
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mera.com/lessons/bsp/properties"
+           xmlns:def="http://www.mera.com/lessons/bsp/definitions"
+           xmlns="http://www.mera.com/lessons/bsp/properties">
+    <xs:element name="system" type="System"/>
+
+    <xs:complexType name="System">
         <xs:sequence>
-            <xs:element type="shelfType" name="shelf"/>
-            <xs:element type="xs:string" name="pdu"/>
+            <xs:element type="Cabinet" name="cabinet"/>
         </xs:sequence>
     </xs:complexType>
-    <xs:complexType name="systemType">
+
+    <xs:complexType name="Cabinet">
         <xs:sequence>
-            <xs:element type="cabinetType" name="cabinet"/>
+            <xs:element maxOccurs="3" type="Shelf" name="shelf"/>
+            <xs:element maxOccurs="3" type="xs:string" name="pdu">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{3}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
-    <xs:complexType name="shelfType">
+
+    <xs:complexType name="Shelf">
         <xs:sequence>
-            <xs:element type="bladeType" name="blade"/>
-            <xs:element type="pfmType" name="pfm"/>
+            <xs:element maxOccurs="unbounded" type="def:Blade" name="blade"/>
         </xs:sequence>
         <xs:attribute type="xs:string" name="type"/>
     </xs:complexType>
-    <xs:complexType name="bladeType">
-        <xs:simpleContent>
-            <xs:extension base="xs:string">
-                <xs:attribute type="xs:string" name="type"/>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
+
 </xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mera.com/lessons/bsp/definitions"
+           xmlns="http://www.mera.com/lessons/bsp/definitions">
+
+    <xs:complexType name="Blade">
+        <xs:attribute type="BladeType" name="type"/>
+    </xs:complexType>
+
+    <xs:simpleType name="BladeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="smx"/>
+            <xs:enumeration value="cmx"/>
+            <xs:enumeration value="scx"/>
+            <xs:enumeration value="gep"/>
+            <xs:enumeration value="cci"/>
+            <xs:enumeration value="bpeb"/>
+            <xs:enumeration value="maub"/>
+            <xs:enumeration value="tbc"/>
+            <xs:enumeration value="islb"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

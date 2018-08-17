@@ -1,13 +1,13 @@
-<system>
+<?xml version="1.0" encoding="UTF-8"?>
+<system xmlns="http://www.mera.com/lessons/bsp/properties"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude"
+      xsi:schemaLocation="http://www.mera.com/lessons/bsp/properties config.xsd">
     <cabinet>
         <shelf type="EGEM2">
-            <blade type="SCXB">
+            <blade type="scx">
 
             </blade>
-            <pfm type="PFM3200">
-
-            </pfm>
         </shelf>
-        <pdu></pdu>
+        <pdu>132</pdu>
     </cabinet>
 </system>
