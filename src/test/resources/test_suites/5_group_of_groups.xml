@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All test areas with groups" parallel="false">
+
+    <test name="all">
+        <groups>
+            <define name="all">
+                <include name="area1"/>
+                <include name="area2"/>
+            </define>
+
+            <run>
+                <include name="all"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.mera.lessons.testng.TestNgTest2Groups"/>
+        </classes>
+    </test>
+</suite>

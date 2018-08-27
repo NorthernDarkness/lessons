@@ -1,8 +1,8 @@
-Create a method that get a String like below as input:
+1. Create a method that gets a String like below as input:
 
-SystemConfiguration:
-Shelf 0: SN: HSY63\1 Blades: 0-0 | 0-26 | 0-1 | 0-28 | 0-25
-Shelf 1: SN: EAF92\2 Blades: 1-0 | 1-26 | 1-1 | 1-23 | 1-28 | 1-25
+System configuration:n\
+Shelf 0: SN: HSY63\1 Blades: 0-0 | 0-26 | 0-1 | 0-28 | 0-25\n
+Shelf 1: SN: EAF92\2 Blades: 1-0 | 1-26 | 1-1 | 1-23 | 1-28 | 1-25\n
 
 
 where each shelf has a list of blades
