@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All test areas with groups" parallel="false">
+	<parameter name="param" value="456" />
+	<test name="all">
+		<classes>
+			<class name="com.mera.lessons.testng.TestNgParams">
+				<methods>
+					<include name="testArea1Sc1" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="all2">
+		<classes>
+			<class name="com.mera.lessons.testng.TestNgParams">
+				<methods>
+					<parameter name="setDisabled" value="true" />
+					<include name="testArea1Sc1" />
+					<include name="testArea1Sc2" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

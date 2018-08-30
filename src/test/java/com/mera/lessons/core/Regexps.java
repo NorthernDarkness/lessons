@@ -2,6 +2,7 @@ package com.mera.lessons.core;
 
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -96,5 +97,13 @@ public class Regexps {
         while (matcher.find()) {
             System.out.println(matcher.group(1));
         }
+    }
+
+    @Test
+    public void testRegexpMisc(){
+        String[] parts = "123-234_456 ".split("[-_ ]");
+        System.out.println(Arrays.asList(parts));
+        String format = String.format("Result is %s", 123);
+        System.out.println(format);
     }
 }
