@@ -4,7 +4,6 @@ import org.testng.SkipException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.log4testng.Logger;
 
 public class TestNgAlwaysRun {
 
