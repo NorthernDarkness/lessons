@@ -12,7 +12,5 @@
         <classes>
             <class name="com.mera.lessons.testng.TestNgTest2Groups"/>
         </classes>
-
     </test>
-
 </suite>

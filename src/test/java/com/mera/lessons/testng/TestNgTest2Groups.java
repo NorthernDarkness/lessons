@@ -3,14 +3,16 @@ package com.mera.lessons.testng;
 import org.testng.annotations.*;
 import org.testng.log4testng.Logger;
 
+import static org.testng.Assert.fail;
+
 public class TestNgTest2Groups {
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void beforeMethod() {
         System.out.println("before each method for area1 group");
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void afterMethod() {
         System.out.println("after each method for area1 group");
     }
