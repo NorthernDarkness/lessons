@@ -1,14 +1,18 @@
 1. You have an enum:
 
 enum Bridge{
-        BRIDGE_0_1(0,1),
+        BRIDGE_0_0(0,0),
         BRIDGE_0_25(0,25),
         BRIDGE_0_26(0,26),
         BRIDGE_0_28(0,28),
-        BRIDGE_1_1(1,1),
+        BRIDGE_1_0(1,0),
         BRIDGE_1_25(1,25),
         BRIDGE_1_26(1,26),
-        BRIDGE_1_28(1,28);
+        BRIDGE_1_28(1,28),
+        BRIDGE_2_0(2,0),
+        BRIDGE_2_25(2,25),
+        BRIDGE_2_26(2,26),
+        BRIDGE_2_28(2,28);
 
         private final int shelf;
         private final int slot;

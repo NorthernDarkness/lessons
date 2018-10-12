@@ -7,7 +7,7 @@ public class BuilderTest {
     @Test
     public void testBuilder() {
         Person person = new Person.Builder("Name", "Surname")
-                .setAddress("Moscow")
+                .setAddress("Cityname")
                 .setAge(35)
                 .build();
     }

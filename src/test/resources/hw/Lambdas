@@ -1,4 +1,5 @@
 1.
 
-There is a class that has a Map<Integer> filed. The task is to write a method in this class that has an integer agrument
-and checks whether this map has such value. If it does return it if not return the incremented value.
+There is a class that has a Map<Integer, String> filed filled by some data. The task is to write a method in this class
+ that has an integer argument and checks whether this map has such value.
+  If it does - return it, if not - return the incremented value.

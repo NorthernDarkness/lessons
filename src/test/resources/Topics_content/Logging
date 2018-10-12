@@ -1,0 +1,13 @@
+VM args
+-Dlogdir=/home/xalrmav/jcatlogs
+-Dname="ft_suite"
+API log levels
+-Djcat.logging=trace
+Protocol log
+-DProtocolLog=true
+-Dlegacylogging=""
+Log file overview(main page header, filters columns, log page filters columns, time)
+Advanced API overview example in logs
+
+TPT2 log writer
+

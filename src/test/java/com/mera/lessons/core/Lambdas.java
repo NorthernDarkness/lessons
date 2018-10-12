@@ -1,5 +1,7 @@
 package com.mera.lessons.core;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.ExecutionException;
@@ -46,7 +48,6 @@ public class Lambdas {
                 System.out.println("running...");
             }
         });
-
     }
 
     @Test
@@ -93,6 +94,15 @@ public class Lambdas {
         return a + b;
     }
 
+
+    @Test
+    public void testMethodReferenceVsLambda() {
+        final Processor processor = new Processor(2, 4);
+        final int result = processor.doAction2(this::sum);
+//        final int result2 = processor.doAction2((int a, int b) -> a + b);
+        System.out.println(result);
+    }
+
     @Test
     public void testUsage() throws InterruptedException, ExecutionException {
         AtomicBoolean b = new AtomicBoolean(false);
@@ -122,10 +132,13 @@ public class Lambdas {
     }
 
     @Test
-    public void partialApplying(){
+    public void partialApplying() {
 
     }
 
+    interface Action2 {
+        int process(Integer a, Integer b);
+    }
 
     interface Action {
         int process(int a, int b);
@@ -140,6 +153,10 @@ public class Lambdas {
             this.b = b;
         }
 
+        int doAction2(Action2 action) {
+            return action.process(a, b);
+        }
+
         int doAction(Action action) {
             return action.process(a, b);
         }
@@ -148,6 +165,7 @@ public class Lambdas {
             return predicate.test(a) ? action.applyAsInt(a, b) : -1;
         }
     }
+
 
 
 

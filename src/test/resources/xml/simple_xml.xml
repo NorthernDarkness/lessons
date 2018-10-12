@@ -4,7 +4,7 @@
         <right_bridge>0-28</right_bridge>
         <external>
             <next_hop>10.34.14.209</next_hop>
-            <vlan>3013</vlan>
+            <vlan tagged="true">3013</vlan>
             <left_additional_port>0-26:GE4</left_additional_port>
             <right_additional_port>0-28:GE4</right_additional_port>
             <ip_v4_ip_left>10.34.14.220/28</ip_v4_ip_left>
@@ -17,7 +17,7 @@
             <vlan>3999</vlan>
             <active_dmxc_ip>10.34.45.220</active_dmxc_ip>
             <ip_v4_ip_left>10.34.45.195/27</ip_v4_ip_left>
-            <ip_v4_ip_right>10.34.45.196/27</ip_v4_ip_right>
+            <!--<ip_v4_ip_right>10.34.45.196/27</ip_v4_ip_right>-->
             <vrrp_session_ip_v4>10.34.45.222</vrrp_session_ip_v4>
         </internal>
     </nb>
@@ -36,3 +36,13 @@
         <password>rootroot</password>
     </ldap>
 </ecim>
+
+<xs:element name="tftp" type="Tftp" minOccurs="0" maxOccurs="unbounded" />
+<xs:complexType name="Tftp">
+<xs:sequence>
+    <xs:any namespace="http://www.ericsson.se/jcat/ebs/properties/access" processContents="skip"/>
+    <xs:element name="type" type="xs:string" minOccurs="0" />
+    <xs:element name="usage" type="def:ServerUsage" />
+    <xs:element name="tftpboot_root" type="def:PathFile" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
