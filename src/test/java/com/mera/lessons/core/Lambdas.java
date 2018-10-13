@@ -17,37 +17,45 @@ import java.util.function.Predicate;
 public class Lambdas {
 
     ExecutorService executorService = Executors.newCachedThreadPool();
-    final int f = 6;
-
-    public static boolean test(int b) {
-        return b > 5;
-    }
-
-    public static boolean waitFor(BooleanSupplier supplier, long timeout, int iterationTime) throws InterruptedException {
-        boolean statusReached = false;
-        long elapsedTime = 0;
-        int i = 0;
-        final String nbIpAddress;
-        while (elapsedTime < timeout) {
-            if (supplier.getAsBoolean()) {
-                statusReached = true;
-                break;
-            } else {
-                Thread.sleep(iterationTime * 1000);
-                System.out.println("interation " + ++i);
-            }
-            elapsedTime += iterationTime;
-        }
-        return statusReached;
-    }
 
     @Test
-    public void testSimpleLambda() {
+    public void testAnonimousClass() {
         executorService.submit(new Runnable() {
             public void run() {
                 System.out.println("running...");
             }
         });
+    }
+
+    @Test
+    public void testSimpleLambda() {
+        executorService.submit(() -> System.out.println("running..."));
+    }
+
+    interface Action {
+        int process(int a, int b);
+    }
+
+    class Processor {
+        int a;
+        int b;
+
+        Processor(int a, int b) {
+            this.a = a;
+            this.b = b;
+        }
+
+        int doAction2(Action2 action) {
+            return action.process(a, b);
+        }
+
+        int doAction(Action action) {
+            return action.process(a, b);
+        }
+
+        int doActionConditionally(IntBinaryOperator action, Predicate<Integer> predicate) {
+            return predicate.test(a) ? action.applyAsInt(a, b) : -1;
+        }
     }
 
     @Test
@@ -76,11 +84,17 @@ public class Lambdas {
         System.out.println(i);
     }
 
+    final int f = 6;
+
     @Test
     public void testScopeThisLambda() {
         final Processor processor = new Processor(1, 2);
         final int i = processor.doAction((int a, int b) -> f - b);
         System.out.println(i);
+    }
+
+    public static boolean test(int b) {
+        return b > 5;
     }
 
     @Test
@@ -94,13 +108,30 @@ public class Lambdas {
         return a + b;
     }
 
-
     @Test
     public void testMethodReferenceVsLambda() {
         final Processor processor = new Processor(2, 4);
         final int result = processor.doAction2(this::sum);
 //        final int result2 = processor.doAction2((int a, int b) -> a + b);
         System.out.println(result);
+    }
+
+    public static boolean waitFor(BooleanSupplier supplier, long timeout, int iterationTime) throws InterruptedException {
+        boolean statusReached = false;
+        long elapsedTime = 0;
+        int i = 0;
+        final String nbIpAddress;
+        while (elapsedTime < timeout) {
+            if (supplier.getAsBoolean()) {
+                statusReached = true;
+                break;
+            } else {
+                Thread.sleep(iterationTime * 1000);
+                System.out.println("interation " + ++i);
+            }
+            elapsedTime += iterationTime;
+        }
+        return statusReached;
     }
 
     @Test
@@ -131,39 +162,8 @@ public class Lambdas {
         assert future2.get().booleanValue();
     }
 
-    @Test
-    public void partialApplying() {
-
-    }
-
     interface Action2 {
         int process(Integer a, Integer b);
-    }
-
-    interface Action {
-        int process(int a, int b);
-    }
-
-    class Processor {
-        int a;
-        int b;
-
-        Processor(int a, int b) {
-            this.a = a;
-            this.b = b;
-        }
-
-        int doAction2(Action2 action) {
-            return action.process(a, b);
-        }
-
-        int doAction(Action action) {
-            return action.process(a, b);
-        }
-
-        int doActionConditionally(IntBinaryOperator action, Predicate<Integer> predicate) {
-            return predicate.test(a) ? action.applyAsInt(a, b) : -1;
-        }
     }
 
 

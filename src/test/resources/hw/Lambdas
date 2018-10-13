@@ -3,3 +3,30 @@
 There is a class that has a Map<Integer, String> filed filled by some data. The task is to write a method in this class
  that has an integer argument and checks whether this map has such value.
   If it does - return it, if not - return the incremented value.
+
+2.
+You have a template:
+
+class Lambda{
+    public static void main (String[] args) {
+    .....
+	}
+
+    public static double calculate(.....){
+        ....
+       	return null;
+    }
+}
+
+Update  calculate() method signature and add its body to make a single method calculator. It has to be able to:
+
+    add;
+    multiply;
+    divide;
+    subtract;
+    to calculate the square root;
+    to raise to a power;
+    raise to a power the sum of arguments divided by the first number + 117;
+    and any other operations you can made up.
+
+    invoke all actions in the main method to make sure they work.
