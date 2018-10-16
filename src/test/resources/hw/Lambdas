@@ -1,6 +1,6 @@
 1.
 
-There is a class that has a Map<Integer, Integer> filed filled by some data. The task is to write a method in this class
+There is a class that has a Map<Integer, Integer> field filled by some data. The task is to write a method in this class
  that has an integer argument and checks whether this map has a value by this key.
   If it does - return the value from the map, if not - add the new entry into the map with this key and value = key+1 and return the value.
 
@@ -9,12 +9,12 @@ You have a template:
 
 class Lambda{
     public static void main (String[] args) {
-    .....
-	}
+         .....
+     	}
 
-    public static double calculate(int x, int y, .....){
-       	return ....;
-    }
+         public static double calculate(int x, int y, .....){
+            	return ....;
+         }
 }
 
 Update  calculate() method signature and add its body to make a single method calculator. It has to be able to:

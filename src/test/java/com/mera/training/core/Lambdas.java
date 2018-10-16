@@ -73,8 +73,8 @@ public class Lambdas {
     @Test
     public void testScopeLambda() {
         final Processor processor = new Processor(1, 2);
-        final int d = 6;
-//        int d = 6;
+//        final int d = 6;
+        int d = 6;
         final int i = processor.doAction((int a, int b) -> d - b);
 //        d++;
         System.out.println(i);
@@ -115,7 +115,7 @@ public class Lambdas {
 
     public void veryBadExample() {
 //        doActionA();
-//        sleep();
+//        sleep(90);
     }
 
     public void pollAExample() {
