@@ -3,7 +3,7 @@
 <suite name="All test areas with groups" parallel="false">
 	<test name="all">
 		<classes>
-			<class name="com.mera.lessons.testng.TestNgChildTest">
+			<class name="com.mera.training.testng.TestNgChildTest">
 				<methods>
 					<include name=".*" />
 				</methods>

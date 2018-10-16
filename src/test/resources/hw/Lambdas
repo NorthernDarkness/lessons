@@ -1,8 +1,8 @@
 1.
 
-There is a class that has a Map<Integer, String> filed filled by some data. The task is to write a method in this class
- that has an integer argument and checks whether this map has such value.
-  If it does - return it, if not - return the incremented value.
+There is a class that has a Map<Integer, Integer> filed filled by some data. The task is to write a method in this class
+ that has an integer argument and checks whether this map has a value by this key.
+  If it does - return the value from the map, if not - add the new entry into the map with this key and value = key+1 and return the value.
 
 2.
 You have a template:
@@ -12,9 +12,8 @@ class Lambda{
     .....
 	}
 
-    public static double calculate(.....){
-        ....
-       	return null;
+    public static double calculate(int x, int y, .....){
+       	return ....;
     }
 }
 
@@ -26,7 +25,7 @@ Update  calculate() method signature and add its body to make a single method ca
     subtract;
     to calculate the square root;
     to raise to a power;
-    raise to a power the sum of arguments divided by the first number + 117;
+    raise to a power the sum of arguments divided by the first argument + 117;
     and any other operations you can made up.
 
     invoke all actions in the main method to make sure they work.

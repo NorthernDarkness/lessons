@@ -10,7 +10,7 @@
         </groups>
 
         <classes>
-            <class name="com.mera.lessons.testng.TestNgPrio"/>
+            <class name="com.mera.training.testng.TestNgPrio"/>
         </classes>
     </test>
 </suite>

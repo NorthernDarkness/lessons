@@ -4,7 +4,7 @@
 
     <test name="all">
         <classes>
-            <class name="com.mera.lessons.testng.TestNgAlwaysRun">
+            <class name="com.mera.training.testng.TestNgAlwaysRun">
                 <methods>
                     <include name="testArea1.*"/>
                 </methods>

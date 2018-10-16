@@ -3,7 +3,7 @@
 <suite name="All test areas with groups" parallel="false">
 	<test name="all">
 		<classes>
-			<class name="com.mera.lessons.testng.TestNgRetry">
+			<class name="com.mera.training.testng.TestNgRetry">
 				<methods>
 					<include name=".*" />
 				</methods>

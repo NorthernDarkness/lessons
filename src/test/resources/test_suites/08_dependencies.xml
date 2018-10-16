@@ -4,7 +4,7 @@
 
 	<test name="all">
 		<classes>
-			<class name="com.mera.lessons.testng.TestNgDependencies">
+			<class name="com.mera.training.testng.TestNgDependencies">
 			 	<methods>
 					<include name=".*"/>
 				</methods> 

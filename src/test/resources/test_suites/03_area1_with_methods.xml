@@ -4,7 +4,7 @@
 
     <test name="all" preserve-order="true">
         <classes>
-            <class name="com.mera.lessons.testng.TestNgTest2Groups">
+            <class name="com.mera.training.testng.TestNgTest2Groups">
                 <methods>
                     <include name="testArea1.*"/>
                 </methods>
