@@ -1,14 +1,11 @@
 1. Create a method that gets a String like below as input:
 
 System configuration:n\
-Shelf 0: SN: HSY63\1 Blades: 0-0 | 0-26 | 0-1 | 0-28 | 0-25\n
-Shelf 1: SN: EAF92\2 Blades: 1-0 | 1-26 | 1-1 | 1-23 | 1-28 | 1-25\n
-Shelf 3: SN: ZUL52\6 Blades: 2-0 | 2-26 \n
-Shelf 4: SN: OPS44\3 Blades: \n
+Blades: 0-0 | 0-26 | 0-1 | 0-28 | 0-25\n
 
-where each shelf has a list of blades
-and returns a Map<Integer, List<String>> or MultiMap<Integer, String> containing blades per shelf.
+and returns a List<String> containing blades per shelf.
 
-Note that you may have 6 or not at all number of shelves and any 12 or not at all number of blades in each shelf including 0, so the Below is possible:
+Note that you may have 12 or not at all number of blades, so the below is possible:
 
 System configuration:n\
+Blades:

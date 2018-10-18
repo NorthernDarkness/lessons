@@ -1,10 +1,12 @@
 package com.mera.training.core;
 
+import lombok.Setter;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,7 +16,7 @@ import java.util.stream.Stream;
 
 public class Regexps {
 
-    final static Logger logger = org.apache.log4j.Logger.getLogger(Regexps.class);
+    final static Logger logger = Logger.getLogger(Regexps.class);
 
     private void testRegexp(String text, String regexp, int... groups) {
         final String r = StringEscapeUtils.escapeJava(regexp);
@@ -186,11 +188,11 @@ public class Regexps {
     @Test
     public void testPossessiveQuantifiers() {
 //        testRegexp("\"value1\"something\"value2\"something", "\"(.*+)\"", 1);
-        final String string = Stream.generate(() -> "JavaJar").limit(2).collect(Collectors.joining());
-//        testRegexp(string, "(Java|Jar)+", 1);
+        final String string = Stream.generate(() -> "JavaJar").limit(700).collect(Collectors.joining());
+        testRegexp(string, "(Java|Jar)+", 1);
 //        testRegexp(string, "(Java|Jar)+?", 1);
-        testRegexp(string, "(Java|Jar)++", 1);
-        testRegexp(string, "(:>Java|Jar)+", 1);
+//        testRegexp(string, "(Java|Jar)++", 1);
+//        testRegexp(string, "(:>Java|Jar)+", 1);
     }
 
     @Test
@@ -205,7 +207,7 @@ public class Regexps {
     @Test
     public void testLookAround() {
         testRegexp("\"va\\\"lue1\"something\"value2\"something", "\"([^\"]*)\"", 1);
-        testRegexp("\"va\\\"lue1\"something\"value2\"something", "\"(.*?)(?<!\\\\)\"");
+        testRegexp("\"va\\\"lue1\"something\"value2\"something", "\"(.*?)(?<!\\\\)\"", 1);
     }
 
 

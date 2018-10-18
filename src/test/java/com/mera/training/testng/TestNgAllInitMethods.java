@@ -27,7 +27,7 @@ public class TestNgAllInitMethods {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		logger.debug("before each method");
+		logger.debug("before method");
 	}
 
 	@Test(groups = { "area1" })
@@ -47,11 +47,11 @@ public class TestNgAllInitMethods {
 
 	@AfterGroups(groups = "area1")
 	public void afterGroup() {
-		logger.debug("after each group");
+		logger.debug("after group");
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		logger.debug("after each method");
+		logger.debug("after method");
 	}
 }
