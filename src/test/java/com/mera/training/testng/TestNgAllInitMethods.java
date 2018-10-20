@@ -1,8 +1,5 @@
 package com.mera.training.testng;
 
-import java.util.Map;
-
-import com.mera.training.core.Regexps;
 import org.apache.log4j.Logger;
 import org.testng.annotations.*;
 
@@ -31,7 +28,7 @@ public class TestNgAllInitMethods {
 	}
 
 	@Test(groups = { "area1" })
-	public void testArea1Sc2() {
+    public void testArea1Sc2() {
 		logger.debug("testArea1Sc2");
 	}
 

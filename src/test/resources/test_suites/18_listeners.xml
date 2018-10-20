@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All test areas with groups" parallel="false">
+	<listeners>
+		<listener class-name="com.mera.training.testng.TestSuiteListener" />
+	</listeners>
+	<test name="all">
+		<classes>
+			<class name="com.mera.training.testng.TestNgAllInitMethods">
+				<methods>
+					<include name=".*" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

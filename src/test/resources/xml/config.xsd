@@ -14,13 +14,6 @@
     <xs:complexType name="Cabinet">
         <xs:sequence>
             <xs:element maxOccurs="3" type="Shelf" name="shelf"/>
-            <xs:element maxOccurs="3" type="xs:string" name="pdu">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="\d{3}"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
         </xs:sequence>
     </xs:complexType>
 

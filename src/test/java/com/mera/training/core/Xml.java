@@ -51,7 +51,7 @@ public class Xml {
     public void testSimpleXml() {
         String bridge = parse();
         String[] split = bridge.split("-");
-//        System.out.println(Integer.parseInt(split[0]) + 1 + "-" + split[1]);
+        System.out.println(Integer.parseInt(split[0]) + 1 + "-" + split[1]);
     }
 
 }

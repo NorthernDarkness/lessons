@@ -188,11 +188,11 @@ public class Regexps {
     @Test
     public void testPossessiveQuantifiers() {
 //        testRegexp("\"value1\"something\"value2\"something", "\"(.*+)\"", 1);
-        final String string = Stream.generate(() -> "JavaJar").limit(700).collect(Collectors.joining());
-        testRegexp(string, "(Java|Jar)+", 1);
+        final String string = Stream.generate(() -> "JavaJar").limit(2).collect(Collectors.joining());
+//        testRegexp(string, "(Java|Jar)+", 1);
 //        testRegexp(string, "(Java|Jar)+?", 1);
 //        testRegexp(string, "(Java|Jar)++", 1);
-//        testRegexp(string, "(:>Java|Jar)+", 1);
+        testRegexp(string, "(:>Java|Jar)+", 1);
     }
 
     @Test

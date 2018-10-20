@@ -8,7 +8,14 @@ import static org.testng.Assert.fail;
 public class TestNgTest2Groups {
 
     final static Logger logger = org.apache.log4j.Logger.getLogger(TestNgAllInitMethods.class);
-    
+    int i;
+
+    @BeforeSuite(alwaysRun = true)
+    public void test(){
+        logger.debug("beforeSuite");
+        logger.debug(i++);
+    }
+
     @BeforeMethod(alwaysRun = true)
     public void beforeMethod() {
         logger.debug("before each method for area1 group");
@@ -32,6 +39,7 @@ public class TestNgTest2Groups {
     @Test(groups = {"area1"})
     public void testArea1Sc1() {
         logger.debug("testArea1Sc1");
+        logger.info(i++);
     }
 
     @Test(groups = {"area1"})
@@ -42,6 +50,7 @@ public class TestNgTest2Groups {
     @Test(groups = {"area2"})
     public void testArea2Sc1() {
         logger.debug("testArea2Sc1");
+        logger.info(i++);
     }
 
     @Test(groups = {"area2"})

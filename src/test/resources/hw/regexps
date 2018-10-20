@@ -1,11 +1,11 @@
 1. Create a method that gets a String like below as input:
 
-System configuration:n\
-Blades: 0-0 | 0-26 | 0-1 | 0-28 | 0-25\n
+       System configuration:n\
+       Blades: 0-0 | 0-26 | 0-1 | 0-28 | 0-25\n
 
-and returns a List<String> containing blades per shelf.
+       and returns a List<String> containing blades per shelf.
 
-Note that you may have 12 or not at all number of blades, so the below is possible:
+       Note that you may have 12 or not at all number of blades, so the below is possible:
 
-System configuration:n\
-Blades:
+       System configuration:n\
+       Blades:
