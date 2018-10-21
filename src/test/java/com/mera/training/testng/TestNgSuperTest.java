@@ -16,7 +16,7 @@ public class TestNgSuperTest {
 
     @BeforeGroups(groups = "area1")
     public void beforeGroup() {
-        System.err.println("before each area1 group super");
+        logger.debug("before each area1 group super");
     }
 
     @Test(groups = {"area1"})

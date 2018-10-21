@@ -5,7 +5,7 @@
     <test name="all">
         <groups>
             <run>
-                <include name="area.*"/>
+                <include name="area1*"/>
             </run>
         </groups>
 

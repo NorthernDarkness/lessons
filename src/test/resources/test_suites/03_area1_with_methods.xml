@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Area1 with methods" parallel="false">
 
-    <test name="all" preserve-order="true">
+    <test name="area1" preserve-order="true">
         <classes>
             <class name="com.mera.training.testng.TestNgTest2Groups">
                 <methods>

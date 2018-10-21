@@ -15,7 +15,7 @@ public class TestNgChildTest extends TestNgSuperTest{
 
     @BeforeGroups(groups = "area1")
     public void beforeGroup2() {
-        System.err.println("before each area1 group child");
+        logger.debug("before each area1 group child");
     }
 
 

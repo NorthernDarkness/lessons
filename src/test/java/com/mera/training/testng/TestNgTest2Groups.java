@@ -13,15 +13,17 @@ public class TestNgTest2Groups {
     @BeforeSuite(alwaysRun = true)
     public void test(){
         logger.debug("beforeSuite");
-        logger.debug(i++);
+        logger.debug(i);
     }
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeMethod()
+//    @BeforeMethod(alwaysRun = true)
     public void beforeMethod() {
         logger.debug("before each method for area1 group");
     }
 
-    @AfterMethod(alwaysRun = true)
+    @AfterMethod()
+//    @AfterMethod(alwaysRun = true)
     public void afterMethod() {
         logger.debug("after each method for area1 group");
     }
@@ -39,7 +41,7 @@ public class TestNgTest2Groups {
     @Test(groups = {"area1"})
     public void testArea1Sc1() {
         logger.debug("testArea1Sc1");
-        logger.info(i++);
+        logger.info(i);
     }
 
     @Test(groups = {"area1"})
@@ -50,7 +52,7 @@ public class TestNgTest2Groups {
     @Test(groups = {"area2"})
     public void testArea2Sc1() {
         logger.debug("testArea2Sc1");
-        logger.info(i++);
+        logger.info(i);
     }
 
     @Test(groups = {"area2"})
