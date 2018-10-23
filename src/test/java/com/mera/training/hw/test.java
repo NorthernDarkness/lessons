@@ -1,6 +1,31 @@
 package com.mera.training.hw;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class test {
+
+    public static void main(String[] args) {
+        System.out.print("First sequense: \n");
+        System.out.print(test("System Configuration: \n Blades: 0-0 | 0-26 | 0-1 | 0-28 | 0-25 | 1-0 | 1-25 \n"));
+        System.out.print("\n\nSecond sequense: \n");
+        System.out.print(test("System Configuration: \n Blades: \n"));
+    }
+
+    private static List<String> test(String testString){
+        List<String> result = new ArrayList<String>();
+        Pattern p = Pattern.compile("(\\d-\\d{1,})");
+        Matcher m = p.matcher(testString);
+
+        while(m.find()){
+            result.add(m.group());
+        }
+        System.out.print("Size of sequense: " + result.size() + "\n");
+        return result;
+    }
+
 
     enum Bridge{
         BRIDGE_0_1(0,1),

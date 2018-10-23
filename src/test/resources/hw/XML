@@ -1,4 +1,6 @@
 1.
 
-Extend config.xml with new item <pdu> which is a cabinet child. It is mandatory element and you must have at least
-one pdu per cabinet, but no more than three. PDU id is is just a number. The PDU definition has to be placed in definitions.xsd
+Extend config.xml with new item <pdu> which is a <cabinet> child.
+It is mandatory element and you must have at least
+one pdu per cabinet, but no more than three.
+PDU id is is just a number less than 4. The PDU definition has to be placed in definitions.xsd

@@ -16,8 +16,8 @@ public class TestNgAlwaysRun {
         throw new SkipException("123");
     }
 
-    @AfterClass
-//    @AfterClass(groups ="area1", alwaysRun = true)
+//    @AfterClass
+    @AfterClass(groups ="area1", alwaysRun = true)
     public void afterClass() {
         logger.debug("after class");
     }

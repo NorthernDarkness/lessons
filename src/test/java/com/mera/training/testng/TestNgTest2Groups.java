@@ -16,14 +16,14 @@ public class TestNgTest2Groups {
         logger.debug(i);
     }
 
-    @BeforeMethod()
-//    @BeforeMethod(alwaysRun = true)
+//    @BeforeMethod()
+    @BeforeMethod(alwaysRun = true)
     public void beforeMethod() {
         logger.debug("before each method for area1 group");
     }
 
-    @AfterMethod()
-//    @AfterMethod(alwaysRun = true)
+//    @AfterMethod()
+    @AfterMethod(alwaysRun = true)
     public void afterMethod() {
         logger.debug("after each method for area1 group");
     }

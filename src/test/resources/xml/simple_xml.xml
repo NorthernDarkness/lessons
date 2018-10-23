@@ -1,6 +1,6 @@
 <ecim>
     <nb>
-        <left_bridge>026</left_bridge>
+        <left_bridge>0-26</left_bridge>
         <right_bridge>0-28</right_bridge>
         <external>
             <next_hop>10.34.14.209</next_hop>

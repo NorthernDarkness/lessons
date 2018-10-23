@@ -15,6 +15,7 @@ public class TestNgDataProviders {
 
 	@DataProvider(name = "dp")
 	public static Object[][] getDp() {
-		return new Object[][] { { "PRIVATE", "DATA", "LEFT", "MANUAL" }, { "PRIVATE", "BASE", "RIGHT", "MANUAL" }, };
+		return new Object[][] { { "PRIVATE", "DATA", "LEFT", "MANUAL" },
+				{ "PRIVATE", "BASE", "RIGHT", "MANUAL" }, };
 	}
 }
