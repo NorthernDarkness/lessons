@@ -60,4 +60,4 @@ loops and methods contains() and containsAll() are not allowed to be used
 2.
 
 Write a method that gets a String representing IPv4 Ip address with "." as octet delimiter like "192.168.0.1".
-The method has to return the same IP address in HEX with leading zeros with ":" as delimiter like "8B:A8:00:01"
+The method has to return the same IP address in HEX with leading zeros with ":" as delimiter like "C0:A8:00:01"
