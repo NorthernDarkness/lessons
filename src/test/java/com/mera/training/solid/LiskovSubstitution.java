@@ -33,22 +33,22 @@ public class LiskovSubstitution {
         }
     }
 
-    @Test
-    public void testBird() {
-        List<Bird> birdList = new ArrayList<Bird>();
-        birdList.add(new Bird());
-        birdList.add(new Crow());
-        birdList.add(new Ostrich());
-        letTheBirdsFly(birdList);
-    }
-
-
-
+//    @Test
+//    public void testBird() {
+//        List<Bird> birdList = new ArrayList<Bird>();
+//        birdList.add(new Bird());
+//        birdList.add(new Crow());
+//        birdList.add(new Ostrich());
+//        letTheBirdsFly(birdList);
+//    }
+//
+//
+//
 //    class Bird{
 //        public void eat(){}
 //    }
 //    class FlightBird extends Bird{
-//        public void fly()()
+//        public void fly(){}
 //    }
 //
 //    class NonFlight extends Bird{}

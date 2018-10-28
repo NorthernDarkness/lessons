@@ -28,8 +28,8 @@ public class OpenClose {
 //   public class Circle{
 //        public double radius;
 //    }
-
-
+//
+//
 //    public class AreaCalculator{
 //        public double calculateRectangleArea(Rectangle rectangle){
 //            return rectangle.length *rectangle.width;
@@ -38,15 +38,15 @@ public class OpenClose {
 //            return (22/7)*circle.radius*circle.radius;
 //        }
 //    }
-
-
-
-
-
-    public interface Shape{
-        public double calculateArea();
-    }
-
+//
+//
+//
+//
+//
+//    public interface Shape{
+//        public double calculateArea();
+//    }
+//
 //    public class Rectangle implements Shape{
 //        double length;
 //        double width;

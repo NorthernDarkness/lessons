@@ -10,7 +10,7 @@ public class Cohesion {
         void cook() {
         }
 
-        void delover() {
+        void deliver() {
         }
 
         void clean() {

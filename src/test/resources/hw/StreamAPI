@@ -48,10 +48,14 @@ enum Bridge{
 
 
 You Need to write a method that gets a List<Integer> of existing shelf numbers.
-The method has to return a List<Bridge> that belongs to these shelves.
+The method has to return a List<Bridge> that belongs to even shelves from the list.
 
-Example input list of integers: 0, 1
-Example output list of bridges: 0-0, 0-25, 0-26, 0-28, 1-0, 1-25, 1-26, 1-28
+Example input list of integers: 0, 1, 2
+Example output list of bridges: 0-0, 0-25, 0-26, 0-28, 2-0, 2-25, 2-26, 2-28
+
+Limitations:
+
+loops and methods contains() and containsAll() are not allowed to be used
 
 2.
 
