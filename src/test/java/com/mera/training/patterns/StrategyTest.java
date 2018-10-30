@@ -17,7 +17,7 @@ public class StrategyTest {
 	@Test
 	public void testStrategy2() {
 		testSmth(-1, m -> {
-			throw new SkipException(m);
+			throw new IllegalArgumentException(m);
 		});
 	}
 
