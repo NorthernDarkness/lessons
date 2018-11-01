@@ -3,6 +3,7 @@
            xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mera.com/lessons/bsp/properties"
            xmlns:def="http://www.mera.com/lessons/bsp/definitions"
            xmlns="http://www.mera.com/lessons/bsp/properties">
+    <xs:import namespace="http://www.mera.com/lessons/bsp/definitions" schemaLocation="definitions.xsd"/>
     <xs:element name="system" type="System"/>
 
     <xs:complexType name="System">
