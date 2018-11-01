@@ -63,7 +63,7 @@ public class DecoratorTest {
 
         @Override
         public String make() {
-            return pizza.make() + " + meet ";
+            return pizza.make() + " + meat ";
         }
     }
 
